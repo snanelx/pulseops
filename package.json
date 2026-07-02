@@ -1,0 +1,20 @@
+{
+  "name": "pulseops",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-style real-time operations platform built as a fullstack portfolio project.",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "db:generate": "pnpm --filter @pulseops/api prisma:generate",
+    "db:migrate": "pnpm --filter @pulseops/api prisma:migrate",
+    "seed": "pnpm --filter @pulseops/api seed"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "devDependencies": {
+    "turbo": "^2.1.3",
+    "typescript": "^5.6.3"
+  }
+}

@@ -4,6 +4,10 @@ PulseOps is a production-style real-time operations platform for monitoring busi
 
 This repository is designed as a portfolio-grade fullstack project: it shows frontend product thinking, backend architecture, real-time delivery, database modeling, Docker-based local infrastructure and clear engineering documentation.
 
+## Screenshots
+
+![PulseOps dashboard](docs/screenshots/dashboard.png)
+
 ## Why this project is portfolio-worthy
 
 - Real business domain instead of a generic CRUD demo.

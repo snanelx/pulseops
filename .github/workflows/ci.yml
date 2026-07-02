@@ -18,8 +18,14 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+          cache-dependency-path: pulseops/pnpm-lock.yaml
       - run: pnpm install --no-frozen-lockfile
+        working-directory: pulseops
       - run: pnpm db:generate
+        working-directory: pulseops
       - run: pnpm lint
+        working-directory: pulseops
       - run: pnpm typecheck
+        working-directory: pulseops
       - run: pnpm build
+        working-directory: pulseops

@@ -1,73 +1,33 @@
-# PulseOps
+# Fullstack Portfolio Lab
 
-PulseOps is a production-style real-time operations platform for monitoring business events, incidents, service health and team activity across multiple workspaces.
+This repository collects production-style portfolio projects built with different parts of my fullstack stack. Each project is intentionally structured like a real product, with documentation, local infrastructure and clear module boundaries.
 
-This repository is designed as a portfolio-grade fullstack project: it shows frontend product thinking, backend architecture, real-time delivery, database modeling, Docker-based local infrastructure and clear engineering documentation.
+## Projects
 
-## Screenshots
+### PulseOps
 
-![PulseOps dashboard](docs/screenshots/dashboard.png)
+Real-time operations dashboard for incidents, service health and business events.
 
-## Why this project is portfolio-worthy
+Stack: Next.js, React, TypeScript, Fastify, Prisma, PostgreSQL, Redis, WebSocket, Docker, Turborepo.
 
-- Real business domain instead of a generic CRUD demo.
-- Monorepo architecture with separate web, API and shared packages.
-- Real-time event stream via WebSocket.
-- PostgreSQL data model with Prisma migrations.
-- Redis-ready architecture for caching, rate limits and pub/sub.
-- Docker Compose environment for PostgreSQL and Redis.
-- CI workflow prepared for linting, type checking and build checks.
-- Clean README, architecture notes and API examples.
+Path: [`pulseops`](pulseops)
 
-## Tech Stack
+![PulseOps dashboard](pulseops/docs/screenshots/dashboard.png)
 
-- Web: Next.js, React, TypeScript, Tailwind CSS
-- API: Fastify, TypeScript, Prisma, JWT, Zod
-- Data: PostgreSQL, Redis
-- Realtime: WebSocket
-- Tooling: pnpm workspaces, Turborepo, Docker, GitHub Actions
+### Tenderly CRM
 
-## Main Features
+B2B tender and proposal management workspace for sales teams.
 
-- Workspace overview dashboard with operational KPIs.
-- Live event feed for deployments, payments, jobs and incidents.
-- Incident management with severity, assignee and status.
-- Metrics API for charts and health widgets.
-- Auth-ready structure with JWT utilities.
-- Shared TypeScript types between frontend and backend.
+Stack: Laravel-style PHP API, Vue 3, Vite, TypeScript, MySQL, Redis, Tailwind CSS, Docker.
 
-## Quick Start
+Path: [`tenderly-crm`](tenderly-crm)
 
-```bash
-pnpm install
-cp .env.example .env
-docker compose up -d
-pnpm db:generate
-pnpm db:migrate
-pnpm seed
-pnpm dev
-```
+## Why This Repository Exists
 
-The web app runs on `http://localhost:3000`.
-The API runs on `http://localhost:4000`.
+The goal is to show range rather than repeat the same stack twice:
 
-## Demo Data
-
-The frontend includes fallback demo data, so the dashboard stays reviewable even before the API and database are started. Running the seed command loads matching data into PostgreSQL.
-
-## Repository Structure
-
-```txt
-apps/
-  api/      Fastify API, Prisma schema, modules
-  web/      Next.js dashboard application
-packages/
-  shared/   Shared domain types and constants
-docs/
-  architecture.md
-  api.md
-```
-
-## What to show recruiters
-
-Start with `docs/architecture.md`, then open the dashboard UI and API modules. The project intentionally highlights system design decisions: module boundaries, shared contracts, real-time event flow and infrastructure setup.
+- realtime SaaS architecture with TypeScript services;
+- PHP/Laravel-style business workflows;
+- frontend product UI with React and Vue;
+- Docker-based local infrastructure;
+- clear README and architecture notes per project.

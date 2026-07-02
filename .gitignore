@@ -1,4 +1,5 @@
 node_modules
+vendor
 .next
 .turbo
 dist
@@ -6,4 +7,6 @@ coverage
 .env
 .env.local
 *.log
+*.tsbuildinfo
 apps/api/prisma/dev.db
+storage/logs
